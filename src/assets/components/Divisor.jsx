@@ -1,9 +1,10 @@
 import React from 'react';
+import video from "../../../public/assets/fotos/DIAGONAL-Animacion-Home.mp4"
 
 export const Divisor = () => {
     return (
             <video
-                src='../../public/assets/fotos/DIAGONAL-Animacion-Home.mp4'
+                src={video}
                 autoPlay
                 loop
                 muted

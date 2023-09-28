@@ -1,4 +1,5 @@
 import React from 'react';
+import logo from "../../../public/assets/fotos/DIAGONAL-Isotipo-Negativo.png"
 
 export const Navbar = ({ onBackToSliderClick, onArtistasClick }) => {
   const handleBackToSliderClick = () => {
@@ -10,7 +11,7 @@ export const Navbar = ({ onBackToSliderClick, onArtistasClick }) => {
     <nav className='bg-[#000] text-[#fff] flex justify-between px-6 sm:px-24 py-4 sm:py-10 items-center w-full max-sm:pt-6'>
       <div>
         <img
-          src='../../public/assets/fotos/DIAGONAL-Isotipo-Negativo.png'
+          src={logo}
           className='w-[91px] h-[51px] cursor-pointer max-w-full max-sm:w-[80px] max-sm:h-[40px]'
           onClick={handleBackToSliderClick}
           alt='Logo'
