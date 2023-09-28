@@ -12,7 +12,10 @@ export const Footer = ({ onBackToSliderClick, onArtistasClick }) => {
         <div className='mt-40 pb-20 mx-20  flex justify-around items-center max-md:flex-col max-md:mt-20'>
             <div className=''>
                 <img className='w-[21rem] mb-8 max-md:mb-16 cursor-pointer' src={logo} />
+                <div className='flex flex-col'>
                 <span className='font-Syne text-[1.2rem] text-[#ffffff5b] cursor-pointer max-md:hidden'>Copyright © 2023</span>
+                <span className='font-Syne text-[1.2rem] text-[#ffffff5b] cursor-pointer max-md:hidden'>Developed by <a className='hover:text-[#fff]' href='https://www.linkedin.com/in/jeronimo-vega-42375b196/' target={'_blank'}>jerovega</a></span>
+                </div>
             </div>
             <div className='w-[1px] h-[11.7rem] bg-[#666] max-md:hidden'>
             </div>
@@ -45,8 +48,10 @@ export const Footer = ({ onBackToSliderClick, onArtistasClick }) => {
                 </div>
 
             </div>
-            <div className='mt-10'>
+            <div className='mt-10 flex flex-col text-center'>
                 <span className='flex-col text-[#666] md:hidden lg:hidden'>Copyright © 2023</span>
+                <span className='font-Syne text-[1.2rem] text-[#ffffff5b] cursor-pointer md:hidden lg:hidden'>Developed by <a className='hover:text-[#fff]' href='https://www.linkedin.com/in/jeronimo-vega-42375b196/' target={'_blank'}>jerovega</a></span>
+                
             </div>
         </div>
     )
