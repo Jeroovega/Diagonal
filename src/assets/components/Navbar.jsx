@@ -10,14 +10,14 @@ export const Navbar = ({ onBackToSliderClick, onArtistasClick }) => {
     <nav className='bg-[#000] text-[#fff] flex justify-between px-6 sm:px-24 py-4 sm:py-10 items-center w-full max-sm:pt-6'>
       <div>
         <img
-          src='../../../public/assets/fotos/DIAGONAL-Isotipo-Negativo.png'
+          src='../../public/assets/fotos/DIAGONAL-Isotipo-Negativo.png'
           className='w-[91px] h-[51px] cursor-pointer max-w-full max-sm:w-[80px] max-sm:h-[40px]'
           onClick={handleBackToSliderClick}
           alt='Logo'
         />
       </div>
       <div className='w-full flex justify-end font-Syne text-2xl font-[400]'>
-        <ul className='flex w-[40%] sm:w-[20%] justify-evenly items-center gap-[2rem]'>
+        <ul className='flex w-[40%] sm:w-[20%] justify-evenly items-center gap-[]'>
           <button onClick={handleBackToSliderClick} className='max-md:hidden'>
             Home
           </button>

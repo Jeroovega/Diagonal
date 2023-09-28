@@ -9,7 +9,7 @@ export const Footer = ({ onBackToSliderClick, onArtistasClick }) => {
     return (
         <div className='mt-40 pb-20 mx-20  flex justify-around items-center max-md:flex-col max-md:mt-20'>
             <div className=''>
-                <img className='w-[21rem] mb-8 max-md:mb-16 cursor-pointer' src='../../../public/assets/fotos/DIAGONAL-Imagotipo-Negativo.png' />
+                <img className='w-[21rem] mb-8 max-md:mb-16 cursor-pointer' src='../../public/assets/fotos/DIAGONAL-Imagotipo-Negativo.png' />
                 <span className='font-Syne text-[1.2rem] text-[#ffffff5b] cursor-pointer max-md:hidden'>Copyright © 2023</span>
             </div>
             <div className='w-[1px] h-[11.7rem] bg-[#666] max-md:hidden'>
