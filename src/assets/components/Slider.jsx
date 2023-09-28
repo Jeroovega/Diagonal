@@ -4,6 +4,7 @@ import { EffectCoverflow, Pagination, Autoplay, Navigation } from 'swiper/module
 import { Navbar } from './Navbar';
 import { artistas } from './artistas';
 import { BiLogoSoundcloud, BiLogoInstagram, BiLogoFacebook } from "react-icons/bi";
+import { advisor } from "../../../public/assets/fotos/resident.webp"
 
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
@@ -62,7 +63,7 @@ export const Slider = () => {
                                 <a><BiLogoInstagram /></a>
                                 <a><BiLogoFacebook /></a>
                                 <a href="https://ra.co/" className='flex' target={'_blank'}><img
-                                    src='../../../public/assets/fotos/resident.webp'
+                                    src={advisor}
                                     className=' object-contain'
                                 /></a>
 
