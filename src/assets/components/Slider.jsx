@@ -4,7 +4,7 @@ import { EffectCoverflow, Pagination, Autoplay, Navigation } from 'swiper/module
 import { Navbar } from './Navbar';
 import { artistas } from './artistas';
 import { BiLogoSoundcloud, BiLogoInstagram, BiLogoFacebook } from "react-icons/bi";
-import { advisor } from "../../../public/assets/fotos/resident.webp"
+import  advisor  from "../../../public/assets/fotos/resident.webp"
 
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
