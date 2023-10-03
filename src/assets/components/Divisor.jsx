@@ -9,7 +9,7 @@ export const Divisor = () => {
                 loop
                 muted
                 playsInline
-                className='w-full max-md:h-[30vh] object-cover'
+                className='w-full relative bottom-12 max-md:h-[30vh] object-cover'
             />
     );
 }
