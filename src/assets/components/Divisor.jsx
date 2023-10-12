@@ -1,5 +1,5 @@
 import React from 'react';
-import video from "../../../public/assets/fotos/DIAGONAL-Animacion-Home.mp4"
+import video from "../../../public/assets/fotos/DIAGONAL-Animacion-Home1.mp4"
 
 export const Divisor = () => {
     return (
@@ -9,7 +9,7 @@ export const Divisor = () => {
                 loop
                 muted
                 playsInline
-                className='w-full relative bottom-12 max-md:h-[30vh] object-cover'
+                className='w-full relative bottom-28 max-md:h-[30vh] object-cover'
             />
     );
 }

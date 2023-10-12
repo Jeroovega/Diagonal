@@ -100,7 +100,7 @@ export const Slider = () => {
                             </ul>  */}
                         </div>
 
-                        <div className='w-[30%] flex items-center max-md:w-[100%] max-md:px-5 max-md:mt-12 max-md:justify-center' >
+                        <div className='w-[30%] flex max-md:w-[100%] max-md:px-5 max-md:mt-12 max-md:justify-center' >
                             <img className='w-[36rem] h-[36rem] rounded-3xl max-md:h-[34rem] max-md:w-[34rem]' src={selectedArtista.foto} alt={selectedArtista.nombre} />
                         </div>
                         {/* Mostrar información del artista seleccionado */}
