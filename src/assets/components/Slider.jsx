@@ -1,10 +1,12 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { EffectCoverflow, Pagination, Autoplay, Navigation } from 'swiper/modules';
-import { Navbar } from './Navbar';
 import { artistas } from './artistas';
 import { BiLogoSoundcloud, BiLogoInstagram, BiLogoFacebook } from "react-icons/bi";
 import advisor from "../../../public/assets/fotos/resident.webp"
+import { useNavigate } from 'react-router-dom';
+
+
 
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
@@ -14,6 +16,7 @@ import 'swiper/css/navigation';
 import ListaArtistas from './SeccionArtistas';
 import { Footer } from './Footer';
 import { Divisor } from './Divisor';
+import Navbar from './Navbar';
 
 export const Slider = () => {
     const [selectedArtista, setSelectedArtista] = useState(null);
@@ -21,19 +24,24 @@ export const Slider = () => {
     const [currentArtista, setCurrentArtista] = useState(null);
     const [showArtistas, setShowArtistas] = useState(false);
     const [isImageCentered, setIsImageCentered] = useState(false);
+    const navigate = useNavigate();
 
-
-    const handleArtistaClick = (nombre) => {
+        const handleArtistaClick = (nombre) => {
         if (isImageCentered) {
             setSelectedArtista(artistas[nombre]);
-        } else {
+            
+            navigate(`/artistas/${nombre}`);
+        } else if (swiperRef.current && swiperRef.current.swiper) {
             swiperRef.current.swiper.slideToLoop(swiperRef.current.swiper.realIndex);
             setIsImageCentered(true);
         }
     };
 
     const handleImageClick = (nombre) => {
+        
+        
         if (isImageCentered) {
+            navigate(`/artistas/${nombre}`);
             setSelectedArtista(artistas[nombre]);
         } else {
             setIsImageCentered(true);
@@ -44,7 +52,7 @@ export const Slider = () => {
     const handleBackToSlider = () => {
         setSelectedArtista(null);
         setShowArtistas(false);
-    };
+};
 
     const handleMostrarArtistas = () => {
         setSelectedArtista(null);
@@ -52,17 +60,32 @@ export const Slider = () => {
     };
 
 
+    useEffect(() => {
+    const handlePopState = () => {
+        // Manejar el evento popstate aquí, por ejemplo, regresar al slider si es necesario.
+        handleBackToSlider();
+    };
+
+    // Agregar un escuchador de eventos para 'popstate' con { passive: true }
+    window.addEventListener('popstate', handlePopState, { passive: true });
+
+    // Eliminar el escuchador de eventos cuando el componente se desmonte
+    return () => {
+        window.removeEventListener('popstate', handlePopState);
+    };
+}, []);
+
 
 
     return (
-        <div>
+        <div className='bg-[#000]'>
             <Navbar onBackToSliderClick={handleBackToSlider} onArtistasClick={handleMostrarArtistas} />
             {selectedArtista ? (
                 <div>
                     <div className="w-full mt-28 mb-10 flex justify-evenly  max-md:mt-20 max-md:flex-col z-10">
 
                         <div className='w-[30rem] max-md:w-[100%] max-md:px-5 z-10'>
-                            <h2 className='text-[#D5B9FC] font-Sora font-[600] text-[4rem] max-md:text-center'>{selectedArtista.nombre}</h2>
+                            <h2 className='text-[#D5B9FC] font-Sora font-[600] text-[4rem] max-md:text-center max-md:text-[3rem]'>{selectedArtista.nombre}</h2>
                             <p className='text-[#757575] font-[500] text-[1.2rem] font-Syne max-md:text-center'>{selectedArtista.bio}</p>
                             <p className='text-[#D5B9FC] mt-2 font-Sora font-[600] text-[1rem] max-md:hidden'>LABEL:
                                 <span className='text-[#757575] font-[500] text-[1rem] font-Syne'> {selectedArtista.label}</span>
@@ -100,8 +123,8 @@ export const Slider = () => {
                             </ul>  */}
                         </div>
 
-                        <div className='w-[30%] flex max-md:w-[100%] max-md:px-5 max-md:mt-12 max-md:justify-center' >
-                            <img className='w-[36rem] h-[36rem] rounded-3xl max-md:h-[34rem] max-md:w-[34rem]' src={selectedArtista.foto} alt={selectedArtista.nombre} />
+                        <div className='w-[30%] flex max-md:w-[100%] max-md:px-5 max-md:justify-center' >
+                            <img className='w-[36rem] h-[36rem] rounded-3xl max-md:h-[34rem] max-md:w-[34rem] max-md:object-contain' src={selectedArtista.foto} alt={selectedArtista.nombre} />
                         </div>
                         {/* Mostrar información del artista seleccionado */}
                     </div>
