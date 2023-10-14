@@ -26,33 +26,39 @@ export const Slider = () => {
     const [isImageCentered, setIsImageCentered] = useState(false);
     const navigate = useNavigate();
 
-        const handleArtistaClick = (nombre) => {
-        if (isImageCentered) {
+    const handleArtistaClick = (nombre) => {
+        if (window.innerWidth <= 768) { // Considera el ancho de la ventana, puedes ajustar este valor
             setSelectedArtista(artistas[nombre]);
-            
             navigate(`/artistas/${nombre}`);
-        } else if (swiperRef.current && swiperRef.current.swiper) {
-            swiperRef.current.swiper.slideToLoop(swiperRef.current.swiper.realIndex);
-            setIsImageCentered(true);
+        } else {
+            if (swiperRef.current && swiperRef.current.swiper) {
+                swiperRef.current.swiper.slideToLoop(swiperRef.current.swiper.realIndex);
+                setIsImageCentered(true);
+                navigate(`/artistas/${nombre}`);
+            }
         }
     };
 
     const handleImageClick = (nombre) => {
-        
-        
-        if (isImageCentered) {
-            navigate(`/artistas/${nombre}`);
+        if (window.innerWidth <= 768) { // Considera el ancho de la ventana, puedes ajustar este valor
             setSelectedArtista(artistas[nombre]);
+            navigate(`/artistas/${nombre}`);
         } else {
-            setIsImageCentered(true);
+            if (isImageCentered) {
+                setIsImageCentered(false); navigate(`/artistas/${nombre}`);
+            } else {
+                if (swiperRef.current && swiperRef.current.swiper) {
+                    swiperRef.current.swiper.slideToLoop(swiperRef.current.swiper.realIndex);
+                    setIsImageCentered(true);
+                }
+            }
         }
     };
-
 
     const handleBackToSlider = () => {
         setSelectedArtista(null);
         setShowArtistas(false);
-};
+    };
 
     const handleMostrarArtistas = () => {
         setSelectedArtista(null);
@@ -61,19 +67,19 @@ export const Slider = () => {
 
 
     useEffect(() => {
-    const handlePopState = () => {
-        // Manejar el evento popstate aquí, por ejemplo, regresar al slider si es necesario.
-        handleBackToSlider();
-    };
+        const handlePopState = () => {
+            // Manejar el evento popstate aquí, por ejemplo, regresar al slider si es necesario.
+            handleBackToSlider();
+        };
 
-    // Agregar un escuchador de eventos para 'popstate' con { passive: true }
-    window.addEventListener('popstate', handlePopState, { passive: true });
+        // Agregar un escuchador de eventos para 'popstate' con { passive: true }
+        window.addEventListener('popstate', handlePopState, { passive: true });
 
-    // Eliminar el escuchador de eventos cuando el componente se desmonte
-    return () => {
-        window.removeEventListener('popstate', handlePopState);
-    };
-}, []);
+        // Eliminar el escuchador de eventos cuando el componente se desmonte
+        return () => {
+            window.removeEventListener('popstate', handlePopState);
+        };
+    }, []);
 
 
 
