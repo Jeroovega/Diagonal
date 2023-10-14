@@ -45,7 +45,8 @@ export const Slider = () => {
             navigate(`/artistas/${nombre}`);
         } else {
             if (isImageCentered) {
-                setIsImageCentered(false); navigate(`/artistas/${nombre}`);
+                navigate(`/artistas/${nombre}`);
+                setIsImageCentered(false); 
             } else {
                 if (swiperRef.current && swiperRef.current.swiper) {
                     swiperRef.current.swiper.slideToLoop(swiperRef.current.swiper.realIndex);
