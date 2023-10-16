@@ -11,6 +11,7 @@ const ListaArtistas = () => {
   const handleArtistaClick = (nombre) => {
     // Navegar a la página de detalle del artista cuando se hace clic en un nombre
     history(`/artistas/${nombre}`);
+    window.scrollTo(0, 0)
   };
 
   return (
