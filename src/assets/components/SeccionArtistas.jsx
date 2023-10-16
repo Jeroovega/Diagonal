@@ -17,7 +17,7 @@ const ListaArtistas = () => {
   return (
     <div className='bg-[#000]'>
     <Navbar />
-    <div className='text-[#fff] bg-[#000] mx-36 mb-20 flex flex-col mt-16 max-lg:mx-0 flex-wrap'>
+    <div className='text-[#fff] bg-[#000] mx-36 mb-20 flex flex-col mt-16 max-lg:mx-0 flex-wrap max-md:mb-[-0rem]'>
       <h1 className='text-[#828282] text-[20px] font-[400] mb-8 max-lg:text-center max-lg:font-bold '>Our Artists</h1>
       <ul className='z-10'>
         {Object.keys(artistas).map((nombre) => (
