@@ -27,7 +27,7 @@ const Navbar = () => {
         </Link>
       </div>
       <div className='w-full flex justify-end font-Syne text-2xl font-[400]'>
-        <ul className='flex w-[40%] sm:w-[20%] justify-evenly items-center'>
+        <ul className='flex w-[40%] sm:w-[20%] justify-evenly items-center gap-9'>
           <button onClick={handleBackToSliderClick} className="max-md:hidden">
             Home
           </button>
@@ -35,7 +35,7 @@ const Navbar = () => {
             onClick={handleArtistasClick}
             className='bg-[#D5B9FC] py-3 px-6 rounded-full font-[400] text-[#000] max-sm:text-[20px] max-sm:px-4 max-sm:py-2'
           >
-            <a className='flex w-[9rem] max-md:w-[7rem] justify-center'>ARTISTS ></a>
+            <a className='flex w-[9rem] max-md:w-[8rem] justify-center'>ARTISTS ></a>
           </button>
         </ul>
       </div>
