@@ -20,9 +20,9 @@ const ArtistaDetalle = () => {
   return (
     <div className='bg-[#000]'>
       <Navbar></Navbar>
-      <div className="w-full mt-28 flex justify-evenly  max-lg:mt-20 max-lg:flex-col flex-w z-10 mb-[2rem] max-md:mb-[-2rem]">
+      <div className="w-full mt-28 flex justify-evenly  max-lg:mt-20 max-lg:flex-col flex-w z-10 mb-[2rem] max-md:mb-[-4rem]">
         <div className='w-[30%] flex max-lg:w-[100%] max-lg:px-5 max-lg:justify-center flex-wrap lg:hidden'>
-          <img className='w-[32rem] h-[36rem] rounded-3xl max-lg:h-[34rem] max-lg:w-[34rem] xl:min-h-[36rem] lg:min-w-[23rem] lg-min-h-[23rem] xl:min-w-[32rem] lg:hidden  object-cover max-lg:mb-[3rem]' src={artista.foto} alt={artista.nombre} />
+          <img className='w-[32rem] h-[36rem] rounded-3xl max-lg:h-[34rem] max-lg:w-[34rem] xl:min-h-[36rem] lg:min-w-[23rem] lg-min-h-[23rem] xl:min-w-[32rem] lg:hidden  object-contain max-lg:mb-[3rem]' src={artista.foto} alt={artista.nombre} />
         </div>
 
           <div className='w-[30rem] max-lg:w-[100%] max-lg:px-5 z-10'>
