@@ -20,35 +20,30 @@ const ArtistaDetalle = () => {
   return (
     <div className='bg-[#000]'>
       <Navbar></Navbar>
-        <div className="w-full mt-28 mb-28 flex justify-evenly  max-lg:mt-20 max-lg:flex-col flex-w z-10">
+      <div className="w-full mt-28 mb-28 flex justify-evenly  max-lg:mt-20 max-lg:flex-col flex-w z-10">
+        <div className='w-[30%] flex max-lg:w-[100%] max-lg:px-5 max-lg:justify-center flex-wrap lg:hidden'>
+          <img className='w-[32rem] h-[36rem] rounded-3xl max-lg:h-[34rem] max-lg:w-[34rem] xl:min-h-[36rem] lg:min-w-[23rem] lg-min-h-[23rem] xl:min-w-[32rem] lg:hidden  object-cover max-lg:mb-[3rem]' src={artista.foto} alt={artista.nombre} />
+        </div>
 
           <div className='w-[30rem] max-lg:w-[100%] max-lg:px-5 z-10'>
-            <h2 className='text-[#D5B9FC] font-Sora font-[600] text-[4rem] max-lg:text-center max-lg:text-[3rem] cursor-pointer'>{artista.nombre}</h2>
-            <p className='text-[#757575] font-[500] text-[1.2rem] font-Syne max-lg:text-center'>{artista.bio}</p>
-            <p className='text-[#D5B9FC] mt-2 font-Sora font-[600] text-[1rem] max-lg:hidden'>LABEL:
-              <span className='text-[#757575] font-[500] text-[1rem] font-Syne'> {artista.label}</span>
-            </p>
-            <p className='text-[#D5B9FC] mt-2 font-Sora font-[600] text-[1rem] max-lg:hidden'>PERFORMANCE:
-              <span className='text-[#757575] font-[500] text-[1rem] font-Syne'> {artista.performance}</span>
-            </p>
-            <p className='text-[#D5B9FC] mt-2 font-Sora font-[600] text-[1rem] max-lg:hidden'>TRAVEL:
-              <span className='text-[#757575] font-[500] text-[1rem] font-Syne'> {artista.travel}</span>
-            </p>
-            {/* Mostrar las redes sociales */}
-            <div className='flex my-6 text-4xl w-[15rem] justify-around text-[#D5B9FC] cursor-pointer max-lg:w-[100%] max-lg:justify-evenly'>
-              <a><BiLogoSoundcloud /></a>
-              <a><BiLogoInstagram /></a>
-              <a><BiLogoFacebook /></a>
-              <a href="https://ra.co/" className='flex' target={'_blank'}><img
-                src={advisor}
-                className=' object-contain'
-              /></a>
+          <h2 className='text-[#D5B9FC] font-Sora font-[600] text-[4rem] max-lg:text-center max-lg:text-[3rem] cursor-pointer'>{artista.nombre}</h2>
+          <p className='text-[#757575] font-[500] text-[1.2rem] font-Syne max-lg:text-center'>{artista.bio}</p>
 
-            </div>
-            <p className='bg-[#D5B9FC] font-Syne text-[1.2rem] cursor-pointer w-[42%] text-center py-2 px-4 rounded-lg max-lg:w-[100%] max-lg:rounded-full max-lg:mt-12 max-lg:mb-12'>
-              agustin@gmail.com
-            </p>
-            {/* Función para poner las redes de cada artista
+          {/* Mostrar las redes sociales */}
+          <div className='flex my-6 text-4xl w-[15rem] justify-around text-[#D5B9FC] cursor-pointer max-lg:w-[100%] max-lg:justify-evenly'>
+            <a><BiLogoSoundcloud /></a>
+            <a><BiLogoInstagram /></a>
+            <a><BiLogoFacebook /></a>
+            <a href="https://ra.co/" className='flex' target={'_blank'}><img
+              src={advisor}
+              className=' object-contain'
+            /></a>
+
+          </div>
+          <p className='bg-[#D5B9FC] font-Syne text-[1.2rem] cursor-pointer w-[42%] text-center py-2 px-4 rounded-lg max-lg:w-[100%] max-lg:rounded-full max-lg:mt-12 max-lg:mb-12 font-bold'>
+            Book Artist
+          </p>
+          {/* Función para poner las redes de cada artista
                             
                              <ul className='text-[#fff] flex'>
                                 {Object.entries(artista.redes).map(([red, url]) => (
@@ -59,17 +54,17 @@ const ArtistaDetalle = () => {
                                     </li>
                                 ))}
                             </ul>  */}
-          </div>
-
-          <div className='w-[30%] flex max-lg:w-[100%] max-lg:px-5 max-lg:justify-center flex-wrap' >
-            <img className='w-[32rem] h-[36rem] rounded-3xl max-lg:h-[34rem] max-lg:w-[34rem] xl:min-h-[36rem] lg:min-w-[23rem] lg-min-h-[23rem] xl:min-w-[32rem]  object-cover' src={artista.foto} alt={artista.nombre} />
-          </div>
-          {/* Mostrar información del artista seleccionado */}
         </div>
-        <Divisor />
 
-        <Footer className="max-lg:mt-0" />
+        <div className='w-[30%] flex max-lg:w-[100%] max-lg:px-5 max-lg:justify-center flex-wrap' >
+          <img className='w-[32rem] h-[36rem] rounded-3xl max-lg:h-[34rem] max-lg:w-[34rem] xl:min-h-[36rem] lg:min-w-[23rem] lg-min-h-[23rem] xl:min-w-[32rem] max-lg:hidden object-cover' src={artista.foto} alt={artista.nombre} />
+        </div>
+        {/* Mostrar información del artista seleccionado */}
       </div>
+      <Divisor />
+
+      <Footer className="max-lg:mt-0" />
+    </div>
   );
 };
 

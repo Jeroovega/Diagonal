@@ -9,12 +9,11 @@ export const Footer = ({ onBackToSliderClick, onArtistasClick }) => {
     };
 
     return (
-        <div className='pb-20 mx-20  flex justify-around items-center max-lg:flex-col mt-0'>
-            <div className=''>
+        <div className='pb-20 mx-20 xl:mt-[-7rem] md:-mt-[9rem] max-lg:mt-[-10rem]  flex justify-around items-center max-lg:flex-col'>
+            <div className='z-10'>
                 <img className='w-[21rem] mb-8 max-lg:mb-16 cursor-pointer' src={logo} />
                 <div className='flex flex-col'>
                 <span className='font-Syne text-[1.2rem] text-[#ffffff5b] cursor-pointer max-lg:hidden'>Copyright © 2023</span>
-                <span className='font-Syne text-[1.2rem] text-[#ffffff5b] cursor-pointer max-lg:hidden'>Developed by <a className='hover:text-[#fff]' href='https://www.linkedin.com/in/jeronimo-vega-42375b196/' target={'_blank'}>jerovega</a></span>
                 </div>
             </div>
             <div className='w-[1px] h-[11.7rem] bg-[#666] max-lg:hidden'>
@@ -39,7 +38,7 @@ export const Footer = ({ onBackToSliderClick, onArtistasClick }) => {
                     </ul>
 
                 </div>
-                <div className='w-[1px] h-[8.7rem] bg-[#666] lg:hidden lg:hidden'></div>
+                <div className='w-[1px] h-[8.7rem] bg-[#666] lg:hidden '></div>
                 <div>
                     <span className='text-[1.2rem] cursor-pointer max-lg:text-[20px] hover:text-[#ffffffc2]'>Social</span>
                     <ul className='text-[1.5rem] cursor-pointer mt-6'>
@@ -49,8 +48,7 @@ export const Footer = ({ onBackToSliderClick, onArtistasClick }) => {
 
             </div>
             <div className='mt-10 flex flex-col text-center'>
-                <span className='flex-col text-[#666] lg:hidden lg:hidden'>Copyright © 2023</span>
-                <span className='font-Syne text-[1.2rem] text-[#ffffff5b] cursor-pointer lg:hidden lg:hidden'>Developed by <a className='hover:text-[#fff]' href='https://www.linkedin.com/in/jeronimo-vega-42375b196/' target={'_blank'}>jerovega</a></span>
+                <span className='flex-col text-[#666] lg:hidden'>Copyright © 2023</span>
                 
             </div>
         </div>

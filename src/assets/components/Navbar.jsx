@@ -33,9 +33,9 @@ const Navbar = () => {
           </button>
           <button
             onClick={handleArtistasClick}
-            className='bg-[#D5B9FC] py-3 px-6 rounded-full font-[400] text-[#000] max-sm:text-[20px] max-sm:px-4 max-sm:py-2 mr-3'
+            className='bg-[#D5B9FC] py-3 px-6 rounded-full font-[400] text-[#000] max-md:text-[15px] max-md:px-2 max-md:py-1 mr-3'
           >
-            <a className='flex w-[9rem] max-md:w-[8rem] justify-center'>ARTISTS ></a>
+            <a className='flex w-[9rem] max-md:w-[6rem] justify-center'>ARTISTS ></a>
           </button>
         </ul>
       </div>
