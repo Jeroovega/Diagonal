@@ -18,7 +18,7 @@ export const Footer = ({ onBackToSliderClick, onArtistasClick }) => {
       };
 
     return (
-        <div className='pb-20 mx-20 xl:mt-[-7rem] md:-mt-[9rem] max-lg:mt-[-11rem]  flex justify-around items-center max-lg:flex-col'>
+        <div className='pb-20 mx-20 xl:mt-[-7rem] md:-mt-[9rem] max-lg:mt-[-11rem]  flex justify-around items-center max-lg:flex-col max-lg:landscape:mt-[-5rem]'>
             <div className='z-10'>
                 <img className='w-[21rem] mb-8 max-lg:mb-16 cursor-pointer' src={logo} />
                 <div className='flex flex-col'>
