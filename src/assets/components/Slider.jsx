@@ -143,7 +143,7 @@ export const Slider = () => {
             ) : showArtistas ? (
                 <ListaArtistas artistas={artistas} onArtistaClick={handleArtistaClick} />
             ) : (
-                <div className='max-md:mb-[-2rem]'>
+                <div className='max-md:mb-[-3rem]'>
                     <Swiper
                         effect={'coverflow'}
                         initialSlide={2}
