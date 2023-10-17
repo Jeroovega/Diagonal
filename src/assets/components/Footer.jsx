@@ -42,7 +42,7 @@ export const Footer = ({ onBackToSliderClick, onArtistasClick }) => {
                 <div>
                     <span className='text-[1.2rem] cursor-pointer max-lg:text-[20px] hover:text-[#ffffffc2]'>Social</span>
                     <ul className='text-[1.5rem] cursor-pointer mt-6'>
-                        <li className='max-lg:text-[20px] hover:text-[#ffffffc2]'><a>Instagram</a></li>
+                        <li className='max-lg:text-[20px] hover:text-[#ffffffc2]'><a href='https://www.instagram.com/diagonal.bookings/' target={"_blank"}>Instagram</a></li>
                     </ul>
                 </div>
 

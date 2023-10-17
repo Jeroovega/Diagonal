@@ -51,9 +51,47 @@ export const artistas = {
     },
     artista4: {
         id: 4,
-        nombre: "CIA REBECK",
-        bio: ``,
-        foto: "../assets/fotos/card04.webp", // Ruta de la imagen para Jero
+        nombre: "ANNĒ",
+        bio: `Born and raised in Thessaloniki she started
+        her music career in 2012. Annē is a promising
+        upcoming talent fully dedicated to techno
+        music and focused on developing her career
+        as a DJ & producer. Starting as a raver she
+        began to think of music like something
+        extremely experiential. Now she wothily
+        represents the techno scene in her country.
+        Her sets are powerful & pumping with never
+        ending dynamics, focused on the perfect
+        interaction with the crowd.
+        As for her music productions she is
+        sharpening her sound having strong
+        references from Detroit, 90’s & 00’s sounds,
+        while she is trying to print her inner feelings
+        into her tracks. Being a local artist and
+        resident DJ of executive underground projects
+        in her city, she has shared the booth with some
+        of the most notable international & local
+        artists.
+        With strong and very successful releases, on
+        Ben Sim’s historic imprint Hardgroove & his
+        second label Symbolism, on Out of Place and
+        on Soma records she made a bigger step to
+        the music scene while her music has gained
+        massive and diverse support, from artists like
+        Amelie Lens, Answer Code Request, Luke
+        Slater, Marcel Fengler, Pan-Pot, Insolate,
+        Volster, Ben Sims, Anfisa Letyago, Joris Voorn,
+        Slam, Blue Hour, Richie Hawtin, Patrick Mason, just to name a few, charting and playing her
+        tracks very often.
+        Her track “Fairy Dust” on Out of place records
+        gained massive support from the scene
+        counting more than 700.000 streams on
+        Spotify & many more on all other platforms.
+        She has already three shows in HÖR berlin!
+        Her future though seems brighter, with new
+        collaborations as long as many vinyl releases
+        later this year.`,
+        foto: "../assets/fotos/anne-3.webp", // Ruta de la imagen para Jero
         label: "Under Club",
         performance: "DJ",
         travel: "1 Person from Bs As, Argentina",
@@ -259,5 +297,5 @@ export const artistas = {
             soundcloud: "url/soundcloud",
         }
     },
-    
+
 };
