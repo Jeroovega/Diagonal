@@ -1,12 +1,21 @@
 import React from 'react'
 
 import logo from "../../../public/assets/fotos/DIAGONAL-Imagotipo-Negativo.png"
+import { Link, useNavigate } from 'react-router-dom';
 
 export const Footer = ({ onBackToSliderClick, onArtistasClick }) => {
 
+    const navigate = useNavigate();
     const handleBackToSliderClick = () => {
-        onBackToSliderClick();
+        navigate(`/`);
+        window.scrollTo(0, 0);
     };
+
+    const handleArtistasClick = () => {
+        // Redirigir a la sección de artistas
+        navigate(`/artistas`);
+        window.scrollTo(0, 0); // Ajusta la URL según la ubicación de tu sección de artistas
+      };
 
     return (
         <div className='pb-20 mx-20 xl:mt-[-7rem] md:-mt-[9rem] max-lg:mt-[-11rem]  flex justify-around items-center max-lg:flex-col'>
@@ -25,7 +34,7 @@ export const Footer = ({ onBackToSliderClick, onArtistasClick }) => {
                     <ul className='text-[1.5rem] cursor-pointer mt-6'>
                         <li
                             className='max-lg:text-[20px] hover:text-[#ffffffc2]'
-                            onClick={onArtistasClick} // Llama a la función al hacer clic en "Artist"
+                            onClick={handleArtistasClick} // Llama a la función al hacer clic en "Artist"
                         >
                             <a>Artist</a>
                         </li>

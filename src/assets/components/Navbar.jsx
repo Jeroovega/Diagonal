@@ -8,12 +8,12 @@ const Navbar = () => {
 
   const handleBackToSliderClick = () => {
     // Redirigir de nuevo al Slider
-    navigate(`/`);; // Ajusta la URL según la ubicación de tu Slider
+    navigate(`/`); // Ajusta la URL según la ubicación de tu Slider
   };
 
   const handleArtistasClick = () => {
     // Redirigir a la sección de artistas
-    navigate(`/artistas`);; // Ajusta la URL según la ubicación de tu sección de artistas
+    navigate(`/artistas`); // Ajusta la URL según la ubicación de tu sección de artistas
   };
   return (
     <nav className='bg-[#000] text-[#fff] flex justify-between px-6 sm:px-24 py-4 sm:py-10 items-center w-full max-sm:pt-6'>

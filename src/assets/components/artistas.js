@@ -118,7 +118,7 @@ export const artistas = {
     },
     artista6: {
         id: 6,
-        nombre: "ESTELLA BOERSMAN",
+        nombre: "ESTELLA BOERSMA",
         bio: `After leaving her mark in the fashion world, Estella appears by all accounts to have strutted into the clubbing scene with as much effortless ease as she displays on international runways.
         Estella Boersma is a Dutch DJ and producer, creating tracks ranging from Techno, Electro and Breakbeat. Based in Berlin, she debuted in 2021 with her first EP on Unknown To The Unknown’s Dance Trax label, followed by another fun and diverse EP on Dance Trax, called Dance Trax vol.34. After appearing in the VA on Planet X 100 years of Columbia compilation, she finished 2022 with a bang with her latest single ‘The Wave’ with popular live streams on Hor Radio, and appearances at places like Radio, Fabric London Into The Woods, Glastonbury, and much more, this Dutch sensation is one to watch.`,
         foto: "../assets/fotos/card06.webp", // Ruta de la imagen para Jero
