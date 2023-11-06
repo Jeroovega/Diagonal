@@ -1,10 +1,12 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
-import './index.css'
+import React from 'react';
+import { createRoot } from 'react-dom/client'; // Importa createRoot desde react-dom
+import App from './App';
+import './index.css';
+import { ArtistaProvider } from './assets/components/ArtistaContext';
 
-ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
+const root = createRoot(document.getElementById('root')); // Utiliza createRoot
+root.render(
+  <ArtistaProvider>
     <App />
-  </React.StrictMode>,
-)
+  </ArtistaProvider>
+);

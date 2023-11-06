@@ -2,9 +2,9 @@ import React, { useState, useRef, useEffect } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { EffectCoverflow, Pagination, Autoplay, Navigation } from 'swiper/modules';
 import { artistas } from './artistas';
-import { BiLogoSoundcloud, BiLogoInstagram, BiLogoFacebook } from "react-icons/bi";
-import advisor from "../../../public/assets/fotos/resident.webp"
 import { useNavigate } from 'react-router-dom';
+import { useArtista } from './ArtistaContext'; 
+import { Helmet } from 'react-helmet';
 
 
 
@@ -50,7 +50,7 @@ export const Slider = () => {
             if (isImageCentered) {
                 navigate(`/artistas/${nombre}`);
                 window.scrollTo(0, 0)
-                setIsImageCentered(false); 
+                setIsImageCentered(false);
             } else {
                 if (swiperRef.current && swiperRef.current.swiper) {
                     swiperRef.current.swiper.slideToLoop(swiperRef.current.swiper.realIndex);
@@ -70,6 +70,7 @@ export const Slider = () => {
         setShowArtistas(true);
     };
 
+    const { artistaId } = useArtista();
 
     useEffect(() => {
         const handlePopState = () => {
@@ -86,59 +87,19 @@ export const Slider = () => {
         };
     }, []);
 
+    const tituloSEO = `Diagonal`;
+    const descripcionSEO = `Diagonal para SEO.`;
 
 
     return (
         <div className='bg-[#000]'>
+            <Helmet>
+                <title>{tituloSEO}</title>
+                <meta name="description" content={descripcionSEO} />
+            </Helmet>
             <Navbar onBackToSliderClick={handleBackToSlider} onArtistasClick={handleMostrarArtistas} />
             {selectedArtista ? (
                 <div>
-                    <div className="w-full mt-28 mb-10 flex justify-evenly  max-lg:mt-20 max-lg:flex-col z-10">
-
-                        <div className='w-[30rem] max-lg:w-[100%] max-lg:px-5 z-10'>
-                            <h2 className='text-[#D5B9FC] font-Sora font-[600] text-[4rem] max-lg:text-center max-lg:text-[3rem]'>{selectedArtista.nombre}</h2>
-                            <p className='text-[#757575] font-[500] text-[1.2rem] font-Syne max-lg:text-center'>{selectedArtista.bio}</p>
-                            <p className='text-[#D5B9FC] mt-2 font-Sora font-[600] text-[1rem] max-lg:hidden'>LABEL:
-                                <span className='text-[#757575] font-[500] text-[1rem] font-Syne'> {selectedArtista.label}</span>
-                            </p>
-                            <p className='text-[#D5B9FC] mt-2 font-Sora font-[600] text-[1rem] max-lg:hidden'>PERFORMANCE:
-                                <span className='text-[#757575] font-[500] text-[1rem] font-Syne'> {selectedArtista.performance}</span>
-                            </p>
-                            <p className='text-[#D5B9FC] mt-2 font-Sora font-[600] text-[1rem] max-lg:hidden'>TRAVEL:
-                                <span className='text-[#757575] font-[500] text-[1rem] font-Syne'> {selectedArtista.travel}</span>
-                            </p>
-                            {/* Mostrar las redes sociales */}
-                            <div className='flex my-6 text-4xl w-[15rem] justify-around text-[#D5B9FC] cursor-pointer max-lg:w-[100%] max-lg:justify-evenly'>
-                                <a><BiLogoSoundcloud /></a>
-                                <a><BiLogoInstagram /></a>
-                                <a><BiLogoFacebook /></a>
-                                <a href="https://ra.co/" className='flex' target={'_blank'}><img
-                                    src={advisor}
-                                    className=' object-contain'
-                                /></a>
-
-                            </div>
-                            <p className='bg-[#D5B9FC] font-Syne text-[1.2rem] cursor-pointer w-[42%] text-center py-2 px-4 rounded-lg max-lg:w-[100%] max-lg:rounded-full max-lg:mt-12'>
-                                agustin@gmail.com
-                            </p>
-                            {/* Función para poner las redes de cada artista
-                            
-                             <ul className='text-[#fff] flex'>
-                                {Object.entries(selectedArtista.redes).map(([red, url]) => (
-                                    <li key={red}>
-                                        <a href={url} target="_blank" rel="noopener noreferrer">
-                                            {red}
-                                        </a>
-                                    </li>
-                                ))}
-                            </ul>  */}
-                        </div>
-
-                        <div className='w-[30%] flex max-lg:w-[100%] max-lg:px-5 max-lg:justify-center' >
-                            <img className='w-[36rem] h-[36rem] rounded-3xl max-lg:h-[34rem] max-lg:w-[34rem] max-lg:object-contain' src={selectedArtista.foto} alt={selectedArtista.nombre} />
-                        </div>
-                        {/* Mostrar información del artista seleccionado */}
-                    </div>
                 </div>
             ) : showArtistas ? (
                 <ListaArtistas artistas={artistas} onArtistaClick={handleArtistaClick} />
@@ -146,7 +107,7 @@ export const Slider = () => {
                 <div className='max-md:mb-[-3rem] max-lg:landscape:mb-[3rem]'>
                     <Swiper
                         effect={'coverflow'}
-                        initialSlide={2}
+                        initialSlide={artistaId}
                         centeredSlides={true}
                         slidesPerView={'5'}
                         coverflowEffect={{
@@ -195,7 +156,7 @@ export const Slider = () => {
                             }}
                             className='bg-[#D5B9FC] w-[270px] py-4 px-19 my-6 text-xl font-Syne rounded-full max-sm:text-2xl max-sm:w-[23rem] z-10'
                         >
-                            {selectedArtista ? 'Volver al Slider' : currentArtista || artistas.artista1.nombre}
+                            {selectedArtista ? 'Volver al Slider' : currentArtista || artistas.afemsyko.nombre}
                         </button>
                     </div>
                 </div>

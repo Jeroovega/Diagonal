@@ -4,6 +4,7 @@ import {artistas} from './artistas'; // Asegúrate de importar artistas adecuada
 import { Divisor } from './Divisor';
 import { Footer } from './Footer';
 import Navbar from './Navbar';
+import { Helmet } from 'react-helmet';
 
 const ListaArtistas = () => {
   const history = useNavigate();
@@ -14,8 +15,16 @@ const ListaArtistas = () => {
     window.scrollTo(0, 0)
   };
 
+  const tituloSEO = `Artistas - Diagonal`;
+  const descripcionSEO = `Artistas para SEO.`;
+
+
   return (
     <div className='bg-[#000]'>
+    <Helmet>
+      <title>{tituloSEO}</title>
+      <meta name="description" content={descripcionSEO} />
+    </Helmet>
     <Navbar />
     <div className='text-[#fff] bg-[#000] mx-36 mb-20 flex flex-col mt-16 max-lg:mx-0 flex-wrap max-md:mb-[-1.5rem]'>
       <h1 className='text-[#828282] text-[20px] font-[400] mb-8 max-lg:text-center max-lg:font-bold '>Our Artists</h1>
