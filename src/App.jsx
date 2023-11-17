@@ -10,8 +10,8 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" exact element={<Slider />} />
-        <Route path="/artistas/:nombre" element={<ArtistaDetalle />} />
-        <Route path="/artistas" element={<ListaArtistas />} />
+        <Route path="/artists/:nombre" element={<ArtistaDetalle />} />
+        <Route path="/artists" element={<ListaArtistas />} />
       </Routes>
     </Router>
   );

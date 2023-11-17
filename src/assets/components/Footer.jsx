@@ -13,7 +13,7 @@ export const Footer = ({ onBackToSliderClick, onArtistasClick }) => {
 
     const handleArtistasClick = () => {
         // Redirigir a la sección de artistas
-        navigate(`/artistas`);
+        navigate(`/artists`);
         window.scrollTo(0, 0); // Ajusta la URL según la ubicación de tu sección de artistas
       };
 

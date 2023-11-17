@@ -11,12 +11,12 @@ const ListaArtistas = () => {
 
   const handleArtistaClick = (nombre) => {
     // Navegar a la página de detalle del artista cuando se hace clic en un nombre
-    history(`/artistas/${nombre}`);
+    history(`/artists/${nombre}`);
     window.scrollTo(0, 0)
   };
 
-  const tituloSEO = `Artistas - Diagonal`;
-  const descripcionSEO = `Artistas para SEO.`;
+  const tituloSEO = `Diagonal / Artists`;
+  const descripcionSEO = `Artists para SEO.`;
 
 
   return (

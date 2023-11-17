@@ -29,13 +29,13 @@ export const Slider = () => {
     const handleArtistaClick = (nombre) => {
         if (window.innerWidth <= 768) { // Considera el ancho de la ventana, puedes ajustar este valor
             setSelectedArtista(artistas[nombre]);
-            navigate(`/artistas/${nombre}`);
+            navigate(`/artists/${nombre}`);
             window.scrollTo(0, 0)
         } else {
             if (swiperRef.current && swiperRef.current.swiper) {
                 swiperRef.current.swiper.slideToLoop(swiperRef.current.swiper.realIndex);
                 setIsImageCentered(true);
-                navigate(`/artistas/${nombre}`);
+                navigate(`/artists/${nombre}`);
                 window.scrollTo(0, 0)
             }
         }
@@ -44,11 +44,11 @@ export const Slider = () => {
     const handleImageClick = (nombre) => {
         if (window.innerWidth <= 768) { // Considera el ancho de la ventana, puedes ajustar este valor
             setSelectedArtista(artistas[nombre]);
-            navigate(`/artistas/${nombre}`);
+            navigate(`/artists/${nombre}`);
             window.scrollTo(0, 0)
         } else {
             if (isImageCentered) {
-                navigate(`/artistas/${nombre}`);
+                navigate(`/artists/${nombre}`);
                 window.scrollTo(0, 0)
                 setIsImageCentered(false);
             } else {

@@ -27,7 +27,7 @@ const ArtistaDetalle = () => {
     // Llamar a setArtistaId después de que el componente se monte
     setArtistaId(artista.id - 1);
   }, [nombre, setArtistaId, artista.id]);
-  
+
 
   if (!artista) {
     return <div>Artista no encontrado</div>;
@@ -42,61 +42,81 @@ const ArtistaDetalle = () => {
   const descripcionSEO = ` ${artista.nombre} para SEO.`;
 
   const handleMailtoClick = () => {
-    const email = 'jerovega2001@gmail.com';
-    const body = encodeURIComponent(`Hola,
+    const email = 'agustin@diagonal-bookings.com';
+    const subject = encodeURIComponent('Reserva de Artista');
+    const body = encodeURIComponent(`[ENGLISH BELOW]
+Hola,
+Gracias por tu interés! Si te gustaría bookear a [NOMBRE DE ARTISTA], por favor envíanos la siguiente información:
 
-Gracias por tu interés. Si deseas reservar a [NOMBRE DE ARTISTA], por favor envíanos la siguiente información:
+➔ Fecha del evento: 
+➔ Nombre del evento: 
+➔ Lugar: 
+➔ Capacidad: 
+➔ Cantidad de escenarios/pistas: 
+➔ Capacidad del escenario en el que actuará el/la artista: 
+➔ Capacidad de otras salas/escenarios: 
+➔ Horario de apertura y cierre del evento: 
+➔ Precio de las entradas: 
+➔ Lineup: 
+➔ Set time: 
+➔ Oferta económica: 
+➔ ¿Aplican impuestos? ¿En qué porcentaje y cuáles?: 
+➔ Bookings recientes: 
+➔ Página web: 
 
-Fecha del evento:
-Nombre del evento:
-Lugar:
-Capacidad:
-Cantidad de escenarios/pistas:
-Capacidad del escenario en el que actuará el/la artista:
-Capacidad de otras salas/escenarios:
-Horario de apertura y cierre del evento:
-Precio de las entradas:
-Lineup:
-Set time:
-Oferta económica:
-¿Aplican impuestos? ¿En qué porcentaje y cuáles?:
-Reservas recientes:
-Página web:
+Para la facturación y armado del contrato, también necesitamos saber:
+
+➔ Nombre de la organización: 
+➔ Calle de la org.: 
+➔ N° de Calle de la org.: 
+➔ Código postal: 
+➔ Ciudad: 
+➔ País: 
+➔ Identificación fiscal: 
+➔ Nombre y apellidos de la persona de contacto: 
+➔ Teléfono: 
+➔ Email: 
 
 Hi,
 Thanks for showing interest! If you’d like to book [NOMBRE DE ARTISTA], please send us the following info.:
 
-Date of the event:
-Event name:
-Venue:
-Capacity:
-Number of stages:
-Capacity of stage artist will perform:
-Capacity of other rooms/stages:
-Event open & closing hours:
-Ticket price:
-Lineup:
-Set time:
-Offer:
-Does withholding tax apply, if yes what %:
-Recent bookings:
-Website:
+➔ Date of the event: 
+➔ Event name: 
+➔ Venue: 
+➔ Capacity: 
+➔ Number of stages: 
+➔ Capacity of stage artist will perform: 
+➔ Capacity of other rooms/stages: 
+➔ Event open & closing hours: 
+➔ Ticket price: 
+➔ Lineup: 
+➔ Set time: 
+➔ Offer: 
+➔ Does withholding tax apply, if yes what %: 
+➔ Recent bookings: 
+➔ Website: 
+
 For invoicing and contracting, we also need to know:
+ 
+➔ Name of Organization: 
+➔ Street: 
+➔ Street N°:
+➔ Zip code: 
+➔ City: 
+➔ Country: 
+➔ VAT ID: 
+➔ Contact First & Last Names: 
+➔ Phone Number: 
+➔ Email:    
+`);
 
-Name of Organization:
-Street:
-Street Number:
-Zip code:
-City:
-Country:
-VAT ID:
-Contact First & Last Names:
-Phone Number:
-Email:`);
+    // Generar la URL de correo
+    const mailtoLink = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${subject}&body=${body}`;
 
-    const mailtoLink = `mailto:${email}?body=${body}`;
-    window.location.href = mailtoLink;
+    // Abrir una nueva pestaña con la URL de correo
+    window.open(mailtoLink, '_blank');
   };
+
 
   return (
     <div className='bg-[#000]'>
