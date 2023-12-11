@@ -14,7 +14,7 @@ app.use(bodyParser.json());
 // Configurar tu clave API de SendGrid
 
 const sgMail = require('@sendgrid/mail');
-sgMail.setApiKey('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');
+sgMail.setApiKey('*password*');
 
 const msg = {
   to: 'destinatario@example.com',

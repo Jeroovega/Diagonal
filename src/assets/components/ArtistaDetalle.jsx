@@ -111,10 +111,8 @@ For invoicing and contracting, we also need to know:
 `);
 
     // Generar la URL de correo
-    const mailtoLink = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${subject}&body=${body}`;
-
-    // Abrir una nueva pestaña con la URL de correo
-    window.open(mailtoLink, '_blank');
+    const mailtoLink = `mailto:${email}?subject=${subject}&body=${body}`;
+    window.location.href = mailtoLink;
   };
 
 
