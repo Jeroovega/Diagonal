@@ -57,7 +57,7 @@ export const Footer = ({ onBackToSliderClick, onArtistasClick }) => {
 
             </div>
             <div className='mt-10 flex flex-col text-center'>
-                <span className='flex-col text-[#666] lg:hidden'>Copyright © 2023</span>
+                <span className='flex-col text-[#666] lg:hidden'>Copyright © 2024</span>
                 
             </div>
         </div>
