@@ -17,10 +17,74 @@ const sgMail = require('@sendgrid/mail');
 sgMail.setApiKey('*password*');
 
 const msg = {
-  to: 'destinatario@example.com',
-  from: 'tucorreo@gmail.com',
-  subject: 'Asunto del correo',
-  text: 'Cuerpo del correo en texto plano',
+  to: 'agustin@diagonal-bookings.com',
+  from: '',
+  subject: 'Reserva de Artista',
+  text: `[ENGLISH BELOW]
+  Hola,
+  Gracias por tu interés! Si te gustaría bookear a [NOMBRE DE ARTISTA], por favor envíanos la siguiente información:
+  
+  ➔ Fecha del evento: 
+  ➔ Nombre del evento: 
+  ➔ Lugar: 
+  ➔ Capacidad: 
+  ➔ Cantidad de escenarios/pistas: 
+  ➔ Capacidad del escenario en el que actuará el/la artista: 
+  ➔ Capacidad de otras salas/escenarios: 
+  ➔ Horario de apertura y cierre del evento: 
+  ➔ Precio de las entradas: 
+  ➔ Lineup: 
+  ➔ Set time: 
+  ➔ Oferta económica: 
+  ➔ ¿Aplican impuestos? ¿En qué porcentaje y cuáles?: 
+  ➔ Bookings recientes: 
+  ➔ Página web: 
+  
+  Para la facturación y armado del contrato, también necesitamos saber:
+  
+  ➔ Nombre de la organización: 
+  ➔ Calle de la org.: 
+  ➔ N° de Calle de la org.: 
+  ➔ Código postal: 
+  ➔ Ciudad: 
+  ➔ País: 
+  ➔ Identificación fiscal: 
+  ➔ Nombre y apellidos de la persona de contacto: 
+  ➔ Teléfono: 
+  ➔ Email: 
+  
+  Hi,
+  Thanks for showing interest! If you’d like to book [NOMBRE DE ARTISTA], please send us the following info.:
+  
+  ➔ Date of the event: 
+  ➔ Event name: 
+  ➔ Venue: 
+  ➔ Capacity: 
+  ➔ Number of stages: 
+  ➔ Capacity of stage artist will perform: 
+  ➔ Capacity of other rooms/stages: 
+  ➔ Event open & closing hours: 
+  ➔ Ticket price: 
+  ➔ Lineup: 
+  ➔ Set time: 
+  ➔ Offer: 
+  ➔ Does withholding tax apply, if yes what %: 
+  ➔ Recent bookings: 
+  ➔ Website: 
+  
+  For invoicing and contracting, we also need to know:
+   
+  ➔ Name of Organization: 
+  ➔ Street: 
+  ➔ Street N°:
+  ➔ Zip code: 
+  ➔ City: 
+  ➔ Country: 
+  ➔ VAT ID: 
+  ➔ Contact First & Last Names: 
+  ➔ Phone Number: 
+  ➔ Email:    
+  `,
   html: '<p>Cuerpo del correo en formato HTML</p>',
 };
 
@@ -32,7 +96,7 @@ app.post('/send-email', async (req, res) => {
   
     const msg = {
       to: email,
-      from: 'tu-correo@dominio.com',
+      from: '',
       subject: subject,
       text: body,
       html: body,
