@@ -22,7 +22,7 @@ export const Footer = ({ onBackToSliderClick, onArtistasClick }) => {
             <div className='z-10'>
                 <img className='w-[21rem] mb-8 max-lg:mb-16 cursor-pointer' src={logo} />
                 <div className='flex flex-col'>
-                <span className='font-Syne text-[1.2rem] text-[#ffffff5b] cursor-pointer max-lg:hidden'>Copyright © 2023</span>
+                <span className='font-Syne text-[1.2rem] text-[#ffffff5b] cursor-pointer max-lg:hidden'>Copyright © 2024</span>
                 </div>
             </div>
             <div className='w-[1px] h-[11.7rem] bg-[#666] max-lg:hidden'>
