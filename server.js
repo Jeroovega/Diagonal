@@ -90,7 +90,6 @@ const msg = {
 
 sgMail.send(msg);
 
-
 app.post('/send-email', async (req, res) => {
     const { email, subject, body } = req.body;
   
