@@ -57,7 +57,7 @@ export const artistas = {
         Tiktok, Bad Boombox ventured into starting his own record label, fashion brand, and
         totally legal massage clinic. He is also known to have kissed on the mouth at least six
         times. Expect Bad Boombox at a pub near you in 2025.`,
-        foto: "../assets/fotos/bad.png", // Ruta de la imagen para Jero
+        foto: "../assets/fotos/bad.webp", // Ruta de la imagen para Jero
         label: "Lazy Tapes",
         performance: "DJ",
         travel: "1 Person from Barcelona",
@@ -164,7 +164,7 @@ export const artistas = {
         nombre: "JOHANNES SCHUSTER",
         bio: `Johannes Schuster belongs to the unapologetic new age of energetic techno DJs, paying homage to the industrial undertones of his Cologne roots. Johannes has been leading dance floors as a resident of the mighty “Unreal” events, pairing raw basses with powerful kicks, simultaneously unifying dancers. His music has been released on a wealth of highly respected labels, such as Soma, NineTimesNine, VoxNox, Märked and many more. 
         `,
-        foto: "../assets/fotos/john.png", // Ruta de la imagen para Jero
+        foto: "../assets/fotos/john.webp", // Ruta de la imagen para Jero
         label: "R-Label",
         performance: "DJ",
         travel: "1 Person from Berlin, Germany",
